@@ -49,7 +49,6 @@ class SongController extends Controller
 
     public function store(SongRequest $request)
     {
-        dd($request->mp3_file);
         $this->songService->create($request);
         Session::flash('message', 'Tạo mới bài hát thành công!');
         return redirect()->route('songs.create');
